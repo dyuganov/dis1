@@ -21,7 +21,7 @@ public class Node {
     private String lon;
     private List<Tag> tags = new ArrayList<>();
 
-    public List<Tag> getTags() {
-        return tags;
+    public void addTag(Tag tag) {
+        tags.add(tag);
     }
 }
