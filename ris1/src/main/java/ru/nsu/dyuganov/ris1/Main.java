@@ -11,11 +11,13 @@ public class Main {
     public static void main(String[] args) throws ParseException {
         Config config = CliParser.parse(args);
         if (config == null) {
+            log.error("No args found");
             CliParser.printHelp();
             return;
         }
 
         try {
+            log.debug("Trying to get input stream");
             var inputStream = InputStreamInitializer.getInputStream(config);
         } catch (IOException e) {
             log.error("Error while creating InputStream");
@@ -24,6 +26,7 @@ public class Main {
             log.error("Error while decompressing file");
             throw new RuntimeException(e);
         }
+        log.info("File opened successfully");
 
         // node reader
     }
