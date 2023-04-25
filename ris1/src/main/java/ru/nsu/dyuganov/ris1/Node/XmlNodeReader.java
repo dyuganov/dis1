@@ -1,7 +1,5 @@
 package ru.nsu.dyuganov.ris1.Node;
 
-import ru.nsu.dyuganov.ris1.Main;
-
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;

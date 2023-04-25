@@ -42,8 +42,8 @@ public class OsmStatistics implements Statistics<Node> {
         tagCountPerKey.forEach((key, value) -> tagCountPerKeyStr.append
                 (key).append(": ").append(value).append("\n"));
 
-        return "OsmStatistic\n" +
-                "changes per user\n" + changesPerUserSorted +
-                "\n\ntag count per key\n" + tagCountPerKeyStr;
+        return  "OsmStatistic:\n" +
+                "Changes per user\n" + changesPerUserSorted +
+                "\n\nTag count per key\n" + tagCountPerKeyStr;
     }
 }

@@ -10,12 +10,12 @@ public class CliParser {
 
     public static Config parse(String[] args) throws ParseException {
         final Options options = new Options()
-                .addOption(FILE_OPTION, true, "path to osm data file")
-                .addOption(IS_ARCHIVE_OPTION, false, "file is needed to be unpacked");
+                .addOption(FILE_OPTION, true, "Path to osm data file")
+                .addOption(IS_ARCHIVE_OPTION, false, "File is needed to be unpacked");
         CommandLine cmd = new DefaultParser().parse(options, args);
         log.info("Parsing args");
         if (!cmd.hasOption(FILE_OPTION)) {
-            log.warn("args does not contain file option");
+            log.warn("Args does not contain file option");
             return null;
         }
         return new Config(cmd.getOptionValue(FILE_OPTION), cmd.hasOption(IS_ARCHIVE_OPTION));
