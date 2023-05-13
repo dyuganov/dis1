@@ -9,10 +9,8 @@ public class XmlNodeReader implements NodeReader {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(XmlNodeReader.class);
     private boolean hasNext;
     private Node lastNode;
-
     private static final XMLInputFactory FACTORY = XMLInputFactory.newInstance();
     private final XMLStreamReader reader;
-
     public XmlNodeReader(InputStream inputStream) throws XMLStreamException {
         this.reader = FACTORY.createXMLStreamReader(inputStream, "utf-8");
 

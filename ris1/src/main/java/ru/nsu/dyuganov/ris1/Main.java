@@ -1,11 +1,9 @@
 package ru.nsu.dyuganov.ris1;
 
-import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.nsu.dyuganov.ris1.Node.Node;
 import ru.nsu.dyuganov.ris1.Node.NodeReader;
-import ru.nsu.dyuganov.ris1.Node.NodeReaderException;
 import ru.nsu.dyuganov.ris1.Node.XmlNodeReader;
 import ru.nsu.dyuganov.ris1.Statistics.OsmStatistics;
 import ru.nsu.dyuganov.ris1.Statistics.Statistics;
@@ -20,8 +18,6 @@ public class Main {
             = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) throws Exception {
-
-        //CliParser parser = new CliParser();
         Config config = CliParser.parse(args);
         if (config == null) {
             CliParser.printHelp();
